@@ -11,11 +11,13 @@
     ],
     "require":
     {
-        "silverstripe/framework": "~3.1"
+        "silverstripe/framework": "~3.1",
+        "silverstripe/selectupload": "^1"
     },
     "extra": {
         "branch-alias": {
             "dev-master": "1.x-dev"
         }
-    }
+    },
+    "prefer-stable": true
 }
