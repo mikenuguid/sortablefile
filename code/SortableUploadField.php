@@ -5,7 +5,7 @@
  *
  * @author bummzack
  */
-class SortableUploadField extends UploadField
+class SortableUploadField extends SelectUploadField
 {
     /**
      * @var string the column to be used for sorting
@@ -16,6 +16,12 @@ class SortableUploadField extends UploadField
      * @var bool whether or not the field should check access permissions when sorting. Defaults to true.
      */
     protected $enablePermissionCheck = true;
+
+    public function __construct($name, $title = null, \SS_List $items = null) {
+        parent::__construct($name, $title, $items);
+
+        $this->addExtraClass('sortableupload'); // class, used by js
+    }
 
     public function Field($properties = array())
     {
